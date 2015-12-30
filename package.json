@@ -1,0 +1,26 @@
+{
+  "name": "htmlgame",
+  "version": "0.0.1",
+  "description": "Html5 online game using NodeJS in the backend and ReactJS as frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "html5",
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "yesid ghisays @yeso126",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^5.0.0-beta6",
+    "eslint-plugin-react": "^3.13.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  }
+}
