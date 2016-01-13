@@ -1,26 +1,31 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-const port = process.env.PORT || 3001;
-const app = express();
+var express = require('express');
+var mongoose = require('mongoose');
+var path = require('path');
+var morgan = require('morgan');
+var port = process.env.PORT || 3000;
 
+var app = express();
+
+// Routes imports
+var questions = require('./routes/questions');
 
 mongoose.connect('mongodb://localhost/htmlgame');
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('server connected to MongoDB')
 });
 
-// serve static assets normally
 app.use(express.static(__dirname + '/public'));
+app.use(morgan('combined'));
 
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response){
-  response.sendFile(path.resolve(__dirname, 'index.html'));
+
+app.get('/', function (req, res){
+  res.sendFile(path.resolve(__dirname, + 'public' + 'index.html'));
 });
+
+app.use('/api', questions);
 
 app.listen(port);
 console.log(`server started on localhost:${port}`);
