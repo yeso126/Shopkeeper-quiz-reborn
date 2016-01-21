@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { App } from './App';
+import { TimerView } from './app';
+import appState from './observables'
 
-render(<App />, document.getElementById('root'));
+render(<TimerView appState={appState} />, document.getElementById('root'));
