@@ -1,15 +1,31 @@
 import {observable} from 'mobservable';
 
 var appState = observable({
-    timer: 0
+    timer: 1000,
+    perdiste: false
 });
 
-appState.resetTimer = function() {
+var timer = function () {
+  if (appState.timer < 0) {
+    appState.perdiste = true
+    clearInterval(countdown);
     appState.timer = 0;
+  }
+}
+
+var countdown = function(){
+  setInterval(() => {
+    appState.timer -=80;
+    timer();
+  }, 1000);
+}
+
+
+appState.resetTimer = function() {
+    appState.timer = 1000;
+    appState.perdiste = false;
+    timer();
 };
 
-setInterval(function() {
-    appState.timer += 1;
-}, 1000);
 
 export default appState;
