@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {observer} from 'mobservable-react';
-import appState from '../state/observables';
+
 
 @observer
 export class TimerView extends React.Component {

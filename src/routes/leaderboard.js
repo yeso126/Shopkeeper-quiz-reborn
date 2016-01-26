@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class NoMatch extends React.Component {
+export default class Leaderboard extends React.Component {
     render() {
         return (
           <div>
-            <h1>Error 404</h1>
-            <h2>Page not found</h2>
+            <h1>Leaderboard</h1>
+            <h2>#Todo</h2>
           </div>
         );
     }

@@ -1,19 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
-import Game from './routes/game.js';
-import NoMatch from './routes/nomatch.js';
+import { Router, Route, IndexRoute } from 'react-router';
+import history from './history';
+
 import appState from './state/observables';
 
-// Implementar react-router
+// Routes Imports
+import Root from './routes/root';
+import Leaderboard from './routes/leaderboard';
+import NoMatch from './routes/nomatch';
+import Game from './routes/game';
+import Home from './routes/home';
 
-// render(<TimerView appState={appState} />, document.getElementById('root'));
 
 render((
-  <Router history={browserHistory}>
-    <Route path="/" component={Game}>
-
+  <Router history={history}>
+    <Route path="/" component={Root}>
+      <IndexRoute component={Home}/>
+      <Route path="/shopkeeperquiz" component={Game}/>
+      <Route path="/leaderboard" component={Leaderboard}/>
+      <Route path="*" component={NoMatch}/>
     </Route>
-   <Route path="*" component={NoMatch}/>
   </Router>
 ), document.getElementById('root'));

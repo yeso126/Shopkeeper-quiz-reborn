@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class NoMatch extends React.Component {
+export default class Home extends React.Component {
     render() {
         return (
           <div>
-            <h1>Error 404</h1>
-            <h2>Page not found</h2>
+            <h1>shopkeeperquiz</h1>
+            <h2></h2>
           </div>
         );
     }
