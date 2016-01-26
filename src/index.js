@@ -11,6 +11,7 @@ import Leaderboard from './routes/leaderboard';
 import NoMatch from './routes/nomatch';
 import Game from './routes/game';
 import Home from './routes/home';
+import About from './routes/about';
 
 
 render((
@@ -18,6 +19,7 @@ render((
     <Route path="/" component={Root}>
       <IndexRoute component={Home}/>
       <Route path="/shopkeeperquiz" component={Game}/>
+      <Route path="/about" component={About}/>
       <Route path="/leaderboard" component={Leaderboard}/>
       <Route path="*" component={NoMatch}/>
     </Route>

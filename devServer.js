@@ -26,4 +26,5 @@ app.listen(3001, 'localhost', function(err) {
   }
 
   console.log('Listening at http://localhost:3001');
+  console.log('Webpack compiling resources please wait...');
 });
