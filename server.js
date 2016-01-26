@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
 const port = process.env.PORT || 3000;
@@ -15,14 +15,14 @@ mongoose.connect('mongodb://localhost/htmlgame');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  console.log('server connected to MongoDB')
+  console.log('server connected to MongoDB');
 });
 
 // Middleware
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(morgan('combined'));
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Routes
 app.get('/', (req, res) => {
