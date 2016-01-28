@@ -15,8 +15,13 @@ set NODE_ENV=production
 ## Run commands
 
 npm start initiates devServer
-node start 
 
+Open mongod
+node server
+gulp sass:watch
+webpack --watch --config webpack.config.prod.js
+webpack --watch --config webpack.config.dev.js
+stylus index.styl -w -o ../public
 ## License
 
 CC0 (public domain)
