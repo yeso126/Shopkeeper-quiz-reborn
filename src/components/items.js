@@ -13,7 +13,6 @@ export class TimerView extends React.Component {
             <button onClick={this.onReset}>
               rest
             </button>
-
           </div>
           );
     }

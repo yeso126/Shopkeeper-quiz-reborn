@@ -1,14 +1,25 @@
-.root {
-  display: flex;
+.nav {
   background-color: #202020;
   height: 4em;
   line-height: 2em;
+  display: flex;
+}
+.nav_list {
+  display: flex;
   justify-content: flex-end;
 }
-.root__link {
-  background-color: #dad;
+.nav_list_link {
   padding: 1em 1em 1em 0em;
-  margin: 0em;
+}
+.title {
+  background-color: #090909;
+  color: #a72311;
+  margin: 0;
+  padding-left: 1em;
+}
+.logo {
+  height: 4em;
+  padding-left: 1em;
 }
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {

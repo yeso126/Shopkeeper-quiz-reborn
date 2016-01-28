@@ -5,13 +5,13 @@ export default class Root extends React.Component {
     render() {
         return (
           <div>
-            <nav className="root">
-              <h1>Dota ShopKeeper Quiz Reloaded</h1>
-              <ul>
-
-                <Link className="root__link" to="/">Home</Link>
-                <Link className="root__link" to="shopkeeperquiz">ShopkeeperQuiz</Link>
-                <Link className="root__link" to="leaderboard">Leaderboard</Link>
+            <h1 className="title">Dota 2 ShopKeeper Quiz Reloaded (kappa)</h1>
+            <nav className="nav" >
+              <img className="logo" src="img/dotologo.png"></img>
+              <ul className="nav_list">
+                <Link className="nav_list_link" to="/">Home</Link>
+                <Link className="nav_list_link" to="shopkeeperquiz">ShopkeeperQuiz</Link>
+                <Link className="nav_list_link" to="leaderboard">Leaderboard</Link>
               </ul>
             </nav>
             {this.props.children}
