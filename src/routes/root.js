@@ -5,7 +5,6 @@ export default class Root extends React.Component {
     render() {
         return (
           <div>
-            <h1 className="title">Dota 2 ShopKeeper Quiz Reloaded (kappa)</h1>
             <nav className="nav" >
               <img className="logo" src="img/dotologo.png"></img>
               <ul className="nav_list">

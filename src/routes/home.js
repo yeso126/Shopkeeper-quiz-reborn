@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
+import { History } from 'react-router';
+import {Jumbotron, Button} from 'react-bootstrap';
 
-export default class Home extends React.Component {
+var Home = React.createClass( {
+   mixins: [ History ],
+   pushState(){
+    this.history.pushState(null, '/shopkeeperquiz');
+   },
     render() {
         return (
             <main>
-                <header>
-                  <h1>Welcome user!</h1>
-                </header>
-                <section>
-                  <article>
-                    <h1>ShopKeeperK Quiz with a few Add-ons</h1>
+                <Jumbotron className="container-fluid">
+                  <h1>Dota 2 ShopKeeper Quiz Reloaded</h1>
+                  <h3>4head</h3>
+                  <Button bsStyle="primary"
+                          onClick={this.pushState}>
+                          Play now
+                  </Button>
+                </Jumbotron>
+                <section className="container">
+                  <Jumbotron>
+                    <h2>With a few add-ons</h2>
                     <p>Score system based on response time, practice your timing when buying an item in the shop</p>
-                  </article>
-                  <article>
-                    <h1>Leaderboards</h1>
+                  </Jumbotron>
+                  <Jumbotron>
+                    <h2>Leaderboards</h2>
                     <p>Get a ranked score in the leaderboards, the faster you complete the test the better score you get</p>
-                  </article>
+                  </Jumbotron>
                 </section>
             </main>
         );
     }
-};
+});
+
+export default Home;

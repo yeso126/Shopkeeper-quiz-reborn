@@ -7,7 +7,7 @@
     "build:webpack": "webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js",
-    "start2": "stylus index.styl -w -o ../public",
+    "start2": "stylus ./src/index.styl -w -o ./public/index.css",
     "start3": "webpack --watch --config webpack.config.prod.js"
   },
   "repository": {
@@ -61,6 +61,7 @@
     "mongoose": "^4.3.4",
     "morgan": "^1.6.1",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.28.2",
     "react-css-modules": "^3.6.8",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.3"
